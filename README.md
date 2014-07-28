@@ -27,3 +27,4 @@ The worker process has 2 parts
 
 The read model is configured to use RavenDb because it is fast with reads and ridiculously easy to code with.
                  
+This is just me messing about trying to find my feet with the CQRS Journey code - there's some stuff that shouldn't be where it is and I'm sure there could be further investigation into some of the bits I skipped over (or completely missed!)
