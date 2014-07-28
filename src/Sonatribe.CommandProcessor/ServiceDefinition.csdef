@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceDefinition name="Sonatribe.CommandProcessor" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2014-01.2.3">
+  <WorkerRole name="Sonatribe.CommandProcessor.WorkerRole" vmsize="Small">
+    <Imports>
+      <Import moduleName="Diagnostics" />
+    </Imports>
+    <ConfigurationSettings>
+      <Setting name="Diagnostics.ScheduledTransferPeriod" />
+      <Setting name="Diagnostics.LogLevelFilter" />
+      <Setting name="Diagnostics.PerformanceCounterSampleRate" />
+      <Setting name="DbContext.SqlBus" />
+      <Setting name="MaintenanceMode" />
+      <Setting name="InstrumentationEnabled" />
+    </ConfigurationSettings>
+  </WorkerRole>
+</ServiceDefinition>

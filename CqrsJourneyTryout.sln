@@ -1,0 +1,87 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conversations", "src\Conversations\Conversations.csproj", "{AF291BA8-B3C3-43EF-8651-372D20C66185}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conversations.Api", "src\Conversations.Api\Conversations.Api.csproj", "{D5D73C33-BADF-441A-BE56-242A9E23769E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conversations.Common", "src\Conversations.Common\Conversations.Common.csproj", "{8CC4BC73-4749-463D-9725-04080911A21E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conversations.Specs", "src\Conversations.Specs\Conversations.Specs.csproj", "{334F88E8-2B2E-46B6-8C21-F035639F2A9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "src\Infrastructure\Infrastructure\Infrastructure.csproj", "{B5786D07-5888-4DF5-B295-3FEA593F3BFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Sql", "src\Infrastructure\Sql\Infrastructure.Sql\Infrastructure.Sql.csproj", "{F038F286-5AEF-4341-83EC-9F72F42D06D6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Azure", "Azure", "{2798E54D-1372-4F42-B064-FB0BCAC556CB}"
+EndProject
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "Sonatribe.CommandProcessor", "src\Sonatribe.CommandProcessor\Sonatribe.CommandProcessor.ccproj", "{8DF180FB-43F8-4C83-89A6-7AED1553DD28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sonatribe.CommandProcessor.WorkerRole", "src\WorkerRoleWithSBQueue1\Sonatribe.CommandProcessor.WorkerRole.csproj", "{6B00C99F-652A-464B-8AA0-A46D323A7038}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{F7EDDBC4-2D44-4A4F-8083-7A9B83518018}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Azure", "src\Infrastructure\Azure\Infrastructure.Azure\Infrastructure.Azure.csproj", "{56A53790-2571-4EA6-8742-2FA00E893B21}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF291BA8-B3C3-43EF-8651-372D20C66185}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF291BA8-B3C3-43EF-8651-372D20C66185}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF291BA8-B3C3-43EF-8651-372D20C66185}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF291BA8-B3C3-43EF-8651-372D20C66185}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5D73C33-BADF-441A-BE56-242A9E23769E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5D73C33-BADF-441A-BE56-242A9E23769E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5D73C33-BADF-441A-BE56-242A9E23769E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5D73C33-BADF-441A-BE56-242A9E23769E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CC4BC73-4749-463D-9725-04080911A21E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CC4BC73-4749-463D-9725-04080911A21E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CC4BC73-4749-463D-9725-04080911A21E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CC4BC73-4749-463D-9725-04080911A21E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{334F88E8-2B2E-46B6-8C21-F035639F2A9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{334F88E8-2B2E-46B6-8C21-F035639F2A9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{334F88E8-2B2E-46B6-8C21-F035639F2A9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{334F88E8-2B2E-46B6-8C21-F035639F2A9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5786D07-5888-4DF5-B295-3FEA593F3BFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5786D07-5888-4DF5-B295-3FEA593F3BFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5786D07-5888-4DF5-B295-3FEA593F3BFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5786D07-5888-4DF5-B295-3FEA593F3BFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F038F286-5AEF-4341-83EC-9F72F42D06D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F038F286-5AEF-4341-83EC-9F72F42D06D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F038F286-5AEF-4341-83EC-9F72F42D06D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F038F286-5AEF-4341-83EC-9F72F42D06D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DF180FB-43F8-4C83-89A6-7AED1553DD28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DF180FB-43F8-4C83-89A6-7AED1553DD28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DF180FB-43F8-4C83-89A6-7AED1553DD28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DF180FB-43F8-4C83-89A6-7AED1553DD28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B00C99F-652A-464B-8AA0-A46D323A7038}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B00C99F-652A-464B-8AA0-A46D323A7038}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B00C99F-652A-464B-8AA0-A46D323A7038}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B00C99F-652A-464B-8AA0-A46D323A7038}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56A53790-2571-4EA6-8742-2FA00E893B21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56A53790-2571-4EA6-8742-2FA00E893B21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56A53790-2571-4EA6-8742-2FA00E893B21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56A53790-2571-4EA6-8742-2FA00E893B21}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B5786D07-5888-4DF5-B295-3FEA593F3BFE} = {2798E54D-1372-4F42-B064-FB0BCAC556CB}
+		{F038F286-5AEF-4341-83EC-9F72F42D06D6} = {2798E54D-1372-4F42-B064-FB0BCAC556CB}
+		{56A53790-2571-4EA6-8742-2FA00E893B21} = {2798E54D-1372-4F42-B064-FB0BCAC556CB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35;packages\Unity.Interception.2.1.505.0\lib\NET35;packages\Unity.2.1.505.0\lib\NET35;packages\TransientFaultHandling.Core.5.1.1209.0\lib\NET4;packages\EnterpriseLibrary.WindowsAzure.TransientFaultHandling.5.1.1212.0\lib\NET4;packages\EnterpriseLibrary.WindowsAzure.TransientFaultHandling.5.1.1212.0\DesignTime
+	EndGlobalSection
+EndGlobal

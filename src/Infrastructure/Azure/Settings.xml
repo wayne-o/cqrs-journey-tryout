@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copy this template file as Settings.xml and replace the 
+    placeholders with your Azure access information -->
+<InfrastructureSettings xmlns="urn:microsoft-patterns-and-practices-cqrsjourney">
+  <ServiceBus>
+    <ServiceUriScheme>sb</ServiceUriScheme>
+    <ServiceNamespace>sonatribecfservice</ServiceNamespace>
+    <ServicePath></ServicePath>
+    <TokenIssuer>owner</TokenIssuer>
+    <TokenAccessKey>5COoau7/81DcGMKj0RP9ByaIIZPv7IRTxwjlGFqZxvM=</TokenAccessKey>
+    <Topics>
+      <Topic Path="conversations/commands" DuplicateDetectionHistoryTimeWindow="00:30:00">
+        <Subscription Name="CreateNewConversationCommandHandler" RequiresSession="false" SqlFilter="TypeName IN ('CreateNewConversation')" />
+        <Subscription Name="sessionless" RequiresSession="false" SqlFilter="TypeName IN ('CreateNewConversation')" />
+        <Subscription Name="log" RequiresSession="false"/>
+      </Topic>
+      <Topic Path="conversations/events" IsEventBus="true">
+        <Subscription Name="log" RequiresSession="false"/>
+      </Topic>
+    </Topics>
+  </ServiceBus>
+  <EventSourcing>
+    <!-- Use a valid Windows Azure storage account, as the development storage emulator does not support entity projections, which we are using in the Event Store -->
+    <ConnectionString>DefaultEndpointsProtocol=https;AccountName=sonatribeazure;AccountKey=J4gB89x0mJn8g1oO/oEF3L/1fU80kd7my9cqnIWtjCmt+/hV85dorW2UE5p1NhwMqI9oL2v64dHdiBgf2JDOZA==</ConnectionString>
+    <!-- Table name in Windows Azure has restrictions: Only Alphanumeric Characters, Case-Insensitive, 3 to 63 Characters, May Not Begin With a Numeric Character -->
+    <ConversationsTableName>ConferenceEventStoreOrders</ConversationsTableName>
+  </EventSourcing>
+  <!--<MessageLog>
+    <ConnectionString>DefaultEndpointsProtocol=https;AccountName=[YOUR_ACCOUNT_NAME];AccountKey=[YOUR_ACCOUNT_KEY]</ConnectionString>
+     -->
+  <!--Table name in Windows Azure has restrictions: Only Alphanumeric Characters, Case-Insensitive, 3 to 63 Characters, May Not Begin With a Numeric Character-->
+  <!-- 
+    <TableName>ConferenceMessageLog</TableName>
+  </MessageLog>-->
+  <BlobStorage>
+    <ConnectionString>DefaultEndpointsProtocol=https;AccountName=stimages;AccountKey=jxEZ45YgwR/ss4lw36HliiZUS2PUEB5426nlmDdF0j80iqaeFzGowon3ZmdQ+eD3xmBNzA/e84jiT+pgnZ69vQ==</ConnectionString>
+    <!--Container name in Windows Azure has restrictions: Only Lower-case Alphanumeric Characters and Dashes, 3 to 63 Characters, May Not Begin a Dash, May Not Contain Two Consecutive Dashes-->
+    <RootContainerName>conversations-read-model</RootContainerName>
+  </BlobStorage>
+</InfrastructureSettings>
