@@ -4,7 +4,7 @@ cqrs-journey-tryout
 
 This is a port of the CQRS Journey code that came with the MS Patterns & Practices guidance on CQRS/ES.
 
-I don't like Unity so I have swapped in Castle Windsor IOC.
+I don't like Unity so I have swapped in Castle Windsor IOC. I also don't like the Settings.Xml file and have made it so the command and event handlers are autowired.
 
 I didn't have time to complete this with the Azure ServiceBus config and code - ATM it only uses the SQL implementation.
 
